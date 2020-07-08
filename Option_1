@@ -1,0 +1,60 @@
+How to Make GIMP Look and Work Like Photoshop in Linux
+
+GIMP has been making huge strides in recent years to make itself a viable alternative to APS, there are some way to make it easier on APS users new to GIMP. By customizing GIMP to look and act more like APS.
+
+Install the Photoshop Icon Theme
+
+Obviously, Adobe isn’t going to be releasing the official Photoshop icon theme for GIMP any time soon, but a designer at Deviant Art, Doctormo, meticulously recreated the Photoshop icons and packaged them for GIMP. Head to Doctormo github and download the icons :
+
+Original for GIMP 2.8
+https://github.com/doctormo/GimpPs
+
+for GIMP 2.10
+https://github.com/arbaes/GimpPs
+
+When you boot up GIMP again, you’ll notice the icons and styling more closely match Photoshop.
+
+
+Set the Photoshop Keybinds
+
+To make GIMP react more like APS we need to "reset" the keybindings or 'hotkeys'. If you’re used to the Photoshop ones, GIMPs can feel like a total pain. Luckily, the hardest part has been done for you. You only need to import the keybindings. Download the keybind configuration and rename it to “menurc.” Then, place it into “~/.gimp-2.8.” or “~/.config/GIMP/2.10”
+
+
+More Photoshop Features
+
+There are a few tweaks that will make GIMP feel more like home. These are simple, but can certainly go a long way in easing your transition to GIMP.
+
+1st A More Photoshop-Like Move Tool
+
+GIMPs move tool is similar to the one in Photoshop, but not. We can make it behave more like Photoshop. Do to this select the Move Tool from the Toolbox window. In the right set of menus you’ll find the available options for the Move Tool. Check the box for “Move Active Layer”, then save the change.
+Click on “Edit,” then “Preferences”
+Select “Tool Options”
+and finally, “Save Tool Options Now.”
+You can either restart or keep using it.
+
+2nd Snap to Canvas Edge
+
+GIMP doesn’t snap layers to the canvas edge or grid lines by default. When moving a layer, this IS much less exact. To make GIMP snap layers to the canvas you then have 3 options.
+
+OPTION 1 : GIMP already includes a “Snap to Canvas” option. You just need to enable it.
+Click on “View,” then select “Snap to Canvas” in the resulting menu. This can be used as a temporary option.
+
+OPTION 2 : Turn on Perminant Enable. Using your favorite text editor to open “~/.gimp-2.8/gimprc” or “~/.config/GIMP/2.10/gimprc”.
+Add either or both of the following two lines, as you prefer.
+
+(default-snap-to-canvas yes)
+(default-snap-to-grid yes)
+
+I hope to write a script to automate this step.
+
+3rd & this is an original GIMP plugin, download & install the Resynthesizer plugin
+https://github.com/bootchk/resynthesizer
+
+4th Get a "Layer via copy/cut" option
+http://gimper.net/resources/layer-via-copy-cut.417/
+
+5th Change the Splash Screen (this ones optional, but you can make it what you want)
+
+
+I also found these (if still working) :
+https://www.pcsteps.com/1566-make-gimp-look-work-like-photoshop/
